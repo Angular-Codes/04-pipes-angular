@@ -10,6 +10,7 @@ import { Color, Heroe } from '../../interfaces/ventas.interface';
 export class OrdenarComponent implements OnInit {
 
   isUppercase: boolean = true;
+  sortBy: string = 'name';
   heroes: Heroe[] = [
     {
       name: 'Superman',
@@ -45,6 +46,10 @@ export class OrdenarComponent implements OnInit {
 
   onToggleUppercase(): void {
     this.isUppercase = !this.isUppercase;
+  }
+
+  changeBy( value: string ): void {
+    this.sortBy = value;
   }
 
 }

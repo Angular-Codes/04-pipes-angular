@@ -9,6 +9,7 @@ import { BasicosComponent } from './pages/basicos/basicos.component';
 import { OrdenarComponent } from './pages/ordenar/ordenar.component';
 import { MyUppercasePipe } from './pipes/my-uppercase.pipe';
 import { VuelaPipe } from './pipes/vuela.pipe';
+import { OrdenarPipe } from './pipes/ordenar.pipe';
 
 
 
@@ -22,7 +23,8 @@ import { VuelaPipe } from './pipes/vuela.pipe';
     
     // Pipes
     MyUppercasePipe,
-         VuelaPipe
+         VuelaPipe,
+         OrdenarPipe
   ],
   exports: [
     NumerosComponent, 

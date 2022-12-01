@@ -17,17 +17,20 @@
     >
       Toggle Uppercase
     </button>
-    <p-button 
+    <p-button
+      (click)="changeBy('name')"
       icon="pi pi-sort"
       label="Por Nombre"
       class="p-mr-1"
     ></p-button>
     <p-button
+      (click)="changeBy('fly')"
       icon="pi pi-sort"
-      label="Valores"
+      label="Vuela"
       class="p-mr-1 p-button-success"
     ></p-button>
     <p-button
+      (click)="changeBy('color')"
       icon="pi pi-sort"
       label="Por color"
       class="p-mr-1 p-button-help"
@@ -38,7 +41,7 @@
 
 <div class="p-grid">
   <div class="p-col p-mt-2">
-    <p-table [value]="heroes">
+    <p-table [value]="heroes | ordenar:sortBy">
       <ng-template pTemplate="header">
           <tr>
               <th>Nombre</th>
